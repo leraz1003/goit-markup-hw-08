@@ -1,0 +1,62 @@
+// preference
+
+.preference {
+    padding: 60px 0;
+    @include desktop {
+        padding: 94px 0;
+    }
+}
+
+.icon-list{
+    @include tablet {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between; 
+    }
+}
+
+
+.icon-list>li {
+    width: 100%;
+
+    @include tablet {
+        flex-basis: calc((100% - 60px) / 2); 
+    }
+
+    @include desktop {
+        flex-basis: calc((100% - 90px) / 4);
+    }
+}
+
+.icon-list__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 244, 250, 1);
+    height: 120px;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.icon-list__title{
+    @include font (14, 700, 1.14, null);
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+    @include tablet {
+            display: inline-block;
+    }
+}
+
+.icon-list__desc{
+    color: var(--text-color);
+    @include font (14, null, 1.7, null);
+    margin-bottom: 30px;
+  
+}
+
+
+

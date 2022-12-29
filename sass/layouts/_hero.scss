@@ -1,0 +1,28 @@
+// hero
+
+.hero-container {
+    display: block;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-section {
+    text-align: center;
+    padding: 200px 0;
+    background-image: linear-gradient(to right,
+            rgba(47, 48, 58, 0.4),
+            rgba(47, 48, 58, 0.4)),
+        url("../images/bg-hero.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.hero-title {
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 1);
+    @include font (44, 900, 1.36, 0.06em);
+    margin-bottom: 30px;
+}
