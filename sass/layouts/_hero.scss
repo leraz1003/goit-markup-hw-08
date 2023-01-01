@@ -14,15 +14,57 @@
     background-image: linear-gradient(to right,
             rgba(47, 48, 58, 0.4),
             rgba(47, 48, 58, 0.4)),
-        url("../images/bg-hero.svg");
+        url("../images/hero-bg-mobile.jpg");
+    @include retina {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-bg-mob_2x.jpg");
+    }
     background-repeat: no-repeat;
     background-size: cover;
+
+    @include tablet{
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-bg-tablet.jpg");
+
+
+        @include retina {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url("../images/hero-bg-tablet_2x.jpg");
+        }
+
+    }
+
+    @include desktop {
+        background-image: linear-gradient(to right,
+                    rgba(47, 48, 58, 0.4),
+                    rgba(47, 48, 58, 0.4)),
+                url("../images/hero-bg-desktop.jpg");
+        
+        @include retina {
+            background-image: linear-gradient(to right,
+                        rgba(47, 48, 58, 0.4),
+                        rgba(47, 48, 58, 0.4)),
+                    url("../images/hero-bg-desktop_2x.jpg");
+        }
+    }
 }
 
 
 .hero-title {
     text-transform: uppercase;
     color: rgba(255, 255, 255, 1);
-    @include font (44, 900, 1.36, 0.06em);
+    @include font (26, 900, 1.62, 0.06em);
     margin-bottom: 30px;
+
+    @include desktop {
+        @include font (44, 900, 1.36, 0.06em);
+    }
+
+    
 }

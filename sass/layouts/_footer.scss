@@ -1,22 +1,49 @@
 /* footer */
 .footer {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
     background-color: #2F303A;
     padding: 60px 0;
 
-    &-conteiner {
+    @include tablet {
             display: flex;
-        }
+    }
+
+    @include desktop {
+        display: flex;
+    }
 }
 
+.footer-block {
+    @include tablet {
+        display: flex;
+        align-items: center;
+    }  
 
-.contact-footer>li:not(:last-child) {
-    margin-bottom: 12px;
+    @include desktop {
+        align-items: flex-start;
+    }
 }
 
-.contact-footer__link {
+.footer-list {
+    margin-bottom: 60px;
+    display: block;
+    width: 232px;
+    margin-right: auto;
+    margin-left: auto; 
+    text-align: center; 
+
+    @include tablet {
+        display: inline-block;
+        margin-left: 76px;
+    }
+
+    @include desktop {
+        text-align: left;
+        margin-left: 0;
+        margin-bottom: 0;
+    }
+}
+
+.footer-list__link {
     color: rgba(255, 255, 255, 0.6);
     font-style: normal;
     font-size: 14px;
@@ -30,60 +57,83 @@
         }
 }
 
+
+
+.footer .social-list {
+    margin-bottom: 60px;
+    @include tablet {
+        margin-left: 165px;
+    } 
+    
+    @include desktop {
+        margin-bottom: 0;
+    }
+}
+
+.footer .social-list__link {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #FFFFFF;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+
 .map {
-    @extend .contact-footer__link;
+    @extend .footer-list__link;
     color: #ffffff; 
 }
 
-
-.soc-networks {
-    height: 80px;
-    width: 206px;
-    margin-left: 70px;
-}
-
-.mailing-list__title,
-.follow-title {
+.footer-title {
     @include font(14, null, 1.14, 0.03em);
     text-transform: uppercase;
     color: #FFFFFF;
     margin-bottom: 20px;
-}
-
-.footer-soc-link {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    fill: currentColor;
+     
+        // @include  desktop {
+        //     display: inline-block;
+        // }
+}
 
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #FFFFFF;
+.soc-networks .footer-title {
+    @include tablet {
+        margin-left: 165px;
+    } 
+}
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    &:hover,
-    &:focus {
-            background-color: var(--accent-color);
+.subscription .footer-title {
+    @include desktop {
+            display: block;
         }
 }
 
 
-
-.mailing-list {
-    margin-left: 93px;
+.subscription {
+    @include desktop {
+        margin-left: 93px;
+    } 
 }
 
-.mailing-list__footer-form {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+
+.subscription__form {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+
+    @include desktop {
+        display: flex;
+        align-items: flex-start;
+        width: 100%;
+    }
+
+   
 }
 
-.mailing-list__input-mailing {
-    width: 358px;
+.subscription__mail {
+    width: 450px;
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -93,6 +143,12 @@
     color: #ffffff;
 
     padding: 15px 16px;
+    margin-bottom: 20px;
+
+    @include desktop {
+        margin-right: 12px;
+        width: 358px;
+    }
 }
 
 .input-mailing::placeholder {
@@ -102,12 +158,22 @@
     color: rgba(255, 255, 255, 0.6);
 }
 
-.mailing-list__wrap {
+
+.subscription__wrap {
     position: relative;
+    display: block;
+    width: 200px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @include desktop{
+        display: inline-block;
+    }
+
 }
 
 
-.mailing-list__btn {
+.subscription__btn {
     width: 200px;
     height: 50px;
     background: var(--accent-color);
@@ -119,21 +185,16 @@
 
     font-family: 'Roboto';
     font-style: normal;
-
     @include font (16, 700, 1.875, 0.06em);
-
     color: #FFFFFF;
-    padding-right: 28px;
-
-    margin-left: 12px;
+    padding-right: 31px;
 }
 
 
 
-.mailing-list__icon {
+.subscription__icon {
     position: absolute;
-    right: 28px;
     top: 13px;
-    
+    right: 28px;
 }
 

@@ -3,7 +3,7 @@
     font-weight: $fw;
     line-height: $lh;
     // line-height: $lh / $fs;
-    letter-spacing: $ls + em;
+    letter-spacing: $ls;
 }
 
 @mixin mobile {
@@ -20,6 +20,14 @@
 
 @mixin desktop {
     @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin retina {
+    @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
         @content;
     }
 }
