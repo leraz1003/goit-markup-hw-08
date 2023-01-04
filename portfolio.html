@@ -22,42 +22,106 @@
 <body>
 
     <header class="header">
-        <div class="container header-container">
+        <div class="container">
             <a href="./index.html" class="logo header_logo link">Web<span>Studio</span></a>
-            
-            <nav class="navigation">
-                <ul class="navigation__list list">
-                    <li><a href="./index.html" class="navigation__link link ">Студія</a></li>
-                    <li><a href="./portfolio.html" class="navigation__link link active-page ">Портфоліо</a></li>
-                    <li><a href="" class="navigation__link link">Контакти</a></li>
+    
+            <button type="button" class="js-open-menu menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+                <svg width="40" height="40">
+                    <use href="./images/icons.svg#icon-header_menu"></use>
+                </svg>
+            </button>
+    
+    
+            <div class="menu">
+    
+                <nav class="navigation">
+                    <ul class="navigation__list list">
+                        <li><a href="./index.html" class="navigation__link link ">Студія</a></li>
+                        <li><a href="./portfolio.html" class="navigation__link link active-page ">Портфоліо</a></li>
+                        <li><a href="" class="navigation__link link">Контакти</a></li>
+                    </ul>
+                </nav>
+    
+    
+                <div class="contact">
+                    <ul class="contact-list list">
+                        <li class="contact-item">
+                            <a href="mailto:info@devstudio.com" class="contact-list__link link">
+                                <svg class="contact-list__icon mail-icon">
+                                    <use href="./images/icons.svg#icon-mail"></use>
+                                </svg>
+                                info@devstudio.com</a>
+                        </li>
+                        <li class="contact-list-item">
+                            <a href="tel:+380961111111" class="contact-list__link link">
+                                <svg class="contact-list__icon tel-icon">
+                                    <use href="./images/icons.svg#icon-smartphone"></use>
+                                </svg>
+                                +38 096 111 11 11</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+    
+        <div class="js-menu-container menu-container" id="mobile-menu">
+            <button type="button" class="menu-close menu-toggle js-close-menu">
+                <svg class="mob-close-icon" width="18.67" height="18.67">
+                    <use href="./images/icons.svg#icon-close"></use>
+                </svg>
+            </button>
+    
+            <div class="mobile-menu">
+                <nav class="mob-navigation">
+                    <ul class="mob-navigation-list list ">
+                        <li><a href="./index.html" class="mob-navigation-link link ">Студія</a></li>
+    
+                        <li><a href="./portfolio.html" class="mob-navigation-link link ">Портфоліо</a></li>
+    
+                        <li><a href="" class="mob-navigation-link link">Контакти</a></li>
+                    </ul>
+                </nav>
+    
+    
+                <ul class="mob-connection list">
+                    <li>
+                        <a href="tel:+380961111111" class="mob-connection-tel link">
+                            +38 096 111 11 11</a>
+                    </li>
+    
+                    <li>
+                        <a href="mailto:info@devstudio.com" class="mob-connection-mail link">
+                            info@devstudio.com</a>
+                    </li>
                 </ul>
-            </nav>
-            
-            <ul class="contact list">
-                <li>
-                    <a href="mailto:info@devstudio.com" class="contact__link link">
-                        <svg width="16" height="12" class="contact__icon">
-                            <use href="./images/icons.svg#icon-mail"></use>
-                        </svg>
-                        info@devstudio.com</a>
-                </li>
-                <li>
-                    <a href="tel:+380961111111" class="contact__link link">
-                        <svg width="16" height="12" class="contact__icon">
-                            <use href="./images/icons.svg#icon-smartphone"></use>
-                        </svg>
-                        +38 096 111 11 11</a>
-                </li>
-            </ul>
-
+    
+    
+                <ul class="mob-social-list list">
+                    <li>
+                        <a href="" class="mob-social-link link">Instagram</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-social-link link">Twitter</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-social-link link">Facebook</a>
+                    </li>
+                    <li>
+                        <a href="" class="mob-social-link link">LinkedIn</a>
+                    </li>
+                </ul>
+    
+            </div>
+        </div>
         </div>
     </header>
 
     <main>
         <h2 class="visually-hidden">Portfolio</h2>
-        <section class="section">
+        <section class="portfolio">
             <div class="container">
-            <ul class="list filter" >
+            <ul class="filter list" >
                 <li class="filter-items"><button type="button" class="portfolio-btn">Усі</button></li>
                 <li class="filter-items"><button type="button" class="portfolio-btn">Веб-сайти</button></li>
                 <li class="filter-items"><button type="button" class="portfolio-btn">Додатки</button></li>
@@ -68,13 +132,24 @@
             <ul class="grid list">
                 <li class="grid__item"> 
                     <div class="grid__box">
-                    <img src="./images/port_1.jpg" alt="Технокряк" width="370" class="grid__pic">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-1.jpg 1x, ./images/portfolio/desktop/img-1@2x.jpg 2x " media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-1.jpg 1x, ./images/portfolio/tablet/img-1@2x.jpg 2x" media="(min-width:768px)">
+                         
+                            <source srcset="./images/portfolio/mobile/img-1.jpg 1x, ./images/portfolio/mobile/img-1@2x.jpg 2x " media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-1.jpg 1x, ./images/portfolio/mobile/img-1@2x.jpg 2x "
+                            src="./images/portfolio/mobile/img-1.jpg"
+                                alt="Технокряк"  class="grid__pic">
+                        </picture>
+             
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
                         </div>
                     </div>
-                    <div class="grid__content">
+                    <div class="grid__content first-grid-content"  >
                         <h3 class="grid__caption">Технокряк</h3>
                         <p class="grid__subtitle">Веб-сайт</p>
                     </div>
@@ -82,7 +157,20 @@
 
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_2.jpg" alt="Постер New Orlean vs Golden Star" width="370" class="grid__pic" >
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-2.jpg 1x, ./images/portfolio/desktop/img-2@2x.jpg 2x "
+                                media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-2.jpg 1x, ./images/portfolio/tablet/img-2@2x.jpg 2x"
+                                media="(min-width:768px)">
+                        
+                            <source srcset="./images/portfolio/mobile/img-2.jpg 1x, ./images/portfolio/mobile/img-2@2x.jpg 2x "
+                                media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-2.jpg 1x, ./images/portfolio/mobile/img-2@2x.jpg 2x "
+                                src="./images/portfolio/mobile/img-2.jpg" alt="Постер New Orlean vs Golden Star" class="grid__pic">
+                        </picture>
+                    
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -96,7 +184,20 @@
 
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_3.jpg" alt="Ресторан Seafood" width="370" class="grid__pic">
+                    <picture>
+                        <source srcset="./images/portfolio/desktop/img-3.jpg 1x, ./images/portfolio/desktop/img-3@2x.jpg 2x "
+                            media="(min-width:1200px)">
+                    
+                        <source srcset="./images/portfolio/tablet/img-3.jpg 1x, ./images/portfolio/tablet/img-3@2x.jpg 2x"
+                            media="(min-width:768px)">
+                    
+                        <source srcset="./images/portfolio/mobile/img-3.jpg 1x, ./images/portfolio/mobile/img-3@2x.jpg 2x "
+                            media="(min-width:480px)">
+                    
+                        <img srcset="./images/portfolio/mobile/img-3.jpg 1x, ./images/portfolio/mobile/img-3@2x.jpg 2x "
+                            src="./images/portfolio/mobile/img-3.jpg" alt="Ресторан Seafood"  class="grid__pic">
+                    </picture>
+                    
                     <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -109,7 +210,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_4.jpg" alt="Проєкт Prime" width="370" class="grid__pic">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-4.jpg 1x, ./images/portfolio/desktop/img-4@2x.jpg 2x "
+                                media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-4.jpg 1x, ./images/portfolio/tablet/img-4@2x.jpg 2x"
+                                media="(min-width:768px)">
+                        
+                            <source srcset="./images/portfolio/mobile/img-4.jpg 1x, ./images/portfolio/mobile/img-4@2x.jpg 2x "
+                                media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-4.jpg 1x, ./images/portfolio/mobile/img-4@2x.jpg 2x "
+                                src="./images/portfolio/mobile/img-4.jpg" alt="Проєкт Prime"   class="grid__pic">
+                        </picture>
+                   
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -121,7 +235,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_5.jpg" alt="Проєкт Boxes" width="370" class="grid__pic">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-5.jpg 1x, ./images/portfolio/desktop/img-5@2x.jpg 2x "
+                                media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-5.jpg 1x, ./images/portfolio/tablet/img-5@2x.jpg 2x"
+                                media="(min-width:768px)">
+                        
+                            <source srcset="./images/portfolio/mobile/img-5.jpg 1x, ./images/portfolio/mobile/img-5@2x.jpg 2x "
+                                media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-5.jpg 1x, ./images/portfolio/mobile/img-5@2x.jpg 2x "
+                                src="./images/portfolio/mobile/img-5.jpg" alt="Проєкт Boxes"  class="grid__pic">
+                    </picture>
+                   
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -134,7 +261,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_6.jpg" alt="Inspiration has no Borders" width="370" class="grid__pic">
+                                <picture>
+                                    <source srcset="./images/portfolio/desktop/img-6.jpg 1x, ./images/portfolio/desktop/img-6@2x.jpg 2x "
+                                        media="(min-width:1200px)">
+                                
+                                    <source srcset="./images/portfolio/tablet/img-6.jpg 1x, ./images/portfolio/tablet/img-6@2x.jpg 2x"
+                                        media="(min-width:768px)">
+                                
+                                    <source srcset="./images/portfolio/mobile/img-6.jpg 1x, ./images/portfolio/mobile/img-6@2x.jpg 2x "
+                                        media="(min-width:480px)">
+                                
+                                    <img srcset="./images/portfolio/mobile/img-6.jpg 1x, ./images/portfolio/mobile/img-6@2x.jpg 2x "
+                                        src="./images/portfolio/mobile/img-6.jpg" alt="Inspiration has no Borders"  class="grid__pic">
+                                </picture>
+                    
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -147,7 +287,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_7.jpg" alt="Видання Limited Edition" width="370" class="grid__pic">
+                                    <picture>
+                                        <source srcset="./images/portfolio/desktop/img-7.jpg 1x, ./images/portfolio/desktop/img-7@2x.jpg 2x "
+                                            media="(min-width:1200px)">
+                                    
+                                        <source srcset="./images/portfolio/tablet/img-7.jpg 1x, ./images/portfolio/tablet/img-7@2x.jpg 2x"
+                                            media="(min-width:768px)">
+                                    
+                                        <source srcset="./images/portfolio/mobile/img-7.jpg 1x, ./images/portfolio/mobile/img-7@2x.jpg 2x "
+                                            media="(min-width:480px)">
+                                    
+                                        <img srcset="./images/portfolio/mobile/img-7.jpg 1x, ./images/portfolio/mobile/img-7@2x.jpg 2x "
+                                            src="./images/portfolio/mobile/img-7.jpg" alt="Видання Limited Edition"  class="grid__pic">
+                                    </picture>
+              
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -160,7 +313,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                    <img src="./images/port_8.jpg" alt="Проєкт LAB" width="370" class="grid__pic">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-8.jpg 1x, ./images/portfolio/desktop/img-8@2x.jpg 2x "
+                                media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-8.jpg 1x, ./images/portfolio/tablet/img-8@2x.jpg 2x"
+                                media="(min-width:768px)">
+                        
+                            <source srcset="./images/portfolio/mobile/img-8.jpg 1x, ./images/portfolio/mobile/img-8@2x.jpg 2x "
+                                media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-8.jpg 1x, ./images/portfolio/mobile/img-8@2x.jpg 2x "
+                                src="./images/portfolio/mobile/img-8.jpg" alt="Проєкт LAB"  class="grid__pic">
+                        </picture>
+                    
                         <div class="grid__overlay">
                             <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                             </p>
@@ -173,7 +339,20 @@
                 </li>
                 <li class="grid__item">
                     <div class="grid__box">
-                        <img src="./images/port_9.jpg" alt="Growing Business" width="370" class="grid__pic">
+                        <picture>
+                            <source srcset="./images/portfolio/desktop/img-9.jpg 1x, ./images/portfolio/desktop/img-9@2x.jpg 2x "
+                                media="(min-width:1200px)">
+                        
+                            <source srcset="./images/portfolio/tablet/img-9.jpg 1x, ./images/portfolio/tablet/img-9@2x.jpg 2x"
+                                media="(min-width:768px)">
+                        
+                            <source srcset="./images/portfolio/mobile/img-9.jpg 1x, ./images/portfolio/mobile/img-9@2x.jpg 2x "
+                                media="(min-width:480px)">
+                        
+                            <img srcset="./images/portfolio/mobile/img-9.jpg 1x, ./images/portfolio/mobile/img-9@2x.jpg 2x "
+                                src="./images/portfolio/mobile/img-9.jpg" alt="Growing Business"  class="grid__pic">
+                        </picture>
+                       
                         <div class="grid__overlay">
                                 <p class="grid__desc">Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів. Все це дозволить                               відвідувачу отримати вичерпні відомості про компанію чи приватну особу
                                 </p>
@@ -193,7 +372,7 @@
 
 
 
-<!-- <footer class="footer">
+<footer class="footer">
             <div class="container">
                 <div class="footer-block">
                     <div>
@@ -255,7 +434,7 @@
                 </div>
 
             </div>
-        </footer> -->
+        </footer>
     
 </body>
 </html>

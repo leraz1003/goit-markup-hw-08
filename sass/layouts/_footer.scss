@@ -7,9 +7,6 @@
             display: flex;
     }
 
-    @include desktop {
-        display: flex;
-    }
 }
 
 .footer-block {
@@ -21,6 +18,7 @@
     @include desktop {
         align-items: flex-start;
     }
+
 }
 
 .footer-list {
