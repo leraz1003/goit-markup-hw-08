@@ -1,5 +1,23 @@
 .title {
-    @include font (36, 700, 1.17, null);
+    @include font (28, 700, 1.18, 0.03em);
     text-align: center;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
+
+    @include desktop {
+        @include font (36, 700, 1.17, 0.03em);
+        margin-bottom: 50px;
+    }
+    
+}
+
+.footer-title {
+    @include font(14, null, 1.14, 0.03em);
+    text-transform: uppercase;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.footer-desktop .footer-title {
+    text-align: left;
 }

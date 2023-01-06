@@ -80,9 +80,12 @@ body {
 }
 
 @media screen and (min-width: 1200px) {
-  .footer .container {
-    display: flex;
-    align-items: flex-start;
+  .hero-container {
+    display: block;
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 
@@ -92,6 +95,14 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
 }
 
 .logo {
@@ -120,12 +131,12 @@ body {
 @media screen and (min-width: 768px) {
   .footer__logo {
     display: inline-block;
-    margin-left: 115px;
   }
 }
 @media screen and (min-width: 1200px) {
   .footer__logo {
-    margin-left: 0;
+    margin: 0;
+    margin-bottom: 28px;
   }
 }
 
@@ -151,11 +162,35 @@ body {
 }
 
 .title {
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
-  line-height: 1.17;
+  line-height: 1.18;
+  letter-spacing: 0.03em;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .title {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.17;
+    letter-spacing: 0.03em;
+    margin-bottom: 50px;
+  }
+}
+
+.footer-title {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.footer-desktop .footer-title {
+  text-align: left;
 }
 
 .mobile-menu {
@@ -428,43 +463,36 @@ body {
   }
 }
 
-.hero-container {
-  display: block;
-  max-width: 1600px;
-  height: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.hero-section {
+.hero {
   text-align: center;
-  padding: 200px 0;
+  padding: 118px 0;
   background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mobile.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
 @media (min-device-pixel-ratio: 2), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .hero-section {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-mob_2x.jpg");
   }
 }
 @media screen and (min-width: 768px) {
-  .hero-section {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tablet.jpg");
   }
 }
 @media screen and (min-width: 768px) and (min-device-pixel-ratio: 2), screen and (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 768px) and (min-resolution: 192dpi), screen and (min-width: 768px) and (min-resolution: 2dppx) {
-  .hero-section {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-tablet_2x.jpg");
   }
 }
 @media screen and (min-width: 1200px) {
-  .hero-section {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desktop.jpg");
+    padding: 200px 0;
   }
 }
 @media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (-webkit-min-device-pixel-ratio: 2), screen and (min-width: 1200px) and (min-resolution: 192dpi), screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-  .hero-section {
+  .hero {
     background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/hero-bg-desktop_2x.jpg");
   }
 }
@@ -550,10 +578,21 @@ body {
   line-height: 1.7;
   margin-bottom: 30px;
 }
+@media screen and (min-width: 1200px) {
+  .icon-list__desc {
+    margin-bottom: 0;
+  }
+}
 
 /* what we do */
 .work-section {
   padding-top: 0;
+  margin-bottom: 94px;
+}
+@media (max-width: 1200px) {
+  .work-section {
+    display: none;
+  }
 }
 
 .picture-list {
@@ -592,6 +631,7 @@ body {
 .team {
   padding: 60px 0;
   background-color: #F5F4FA;
+  display: block;
 }
 @media screen and (min-width: 1200px) {
   .team {
@@ -608,6 +648,11 @@ body {
     justify-content: space-between;
   }
 }
+@media screen and (min-width: 1200px) {
+  .card-list {
+    flex-wrap: nowrap;
+  }
+}
 
 .card-list > li {
   background: #FFFFFF;
@@ -617,12 +662,19 @@ body {
 }
 @media screen and (min-width: 768px) {
   .card-list > li {
-    flex-basis: calc((100% - 60px) / 2);
+    flex-basis: calc((100% - 30px) / 2);
+  }
+  .card-list > li:nth-last-child(-n+2) {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {
   .card-list > li {
-    flex-basis: calc((100% - 60px) / 4);
+    flex-basis: calc((100% - 30px) / 4);
+    margin-bottom: 0;
+  }
+  .card-list > li:not(:last-child) {
+    margin-right: 30px;
   }
 }
 
@@ -1114,36 +1166,36 @@ body {
   }
 }
 
+@media (min-width: 1200px) {
+  .footer-tablet {
+    display: none;
+  }
+}
 @media screen and (min-width: 768px) {
   .footer-block {
     display: flex;
-    align-items: center;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-block {
     align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 60px;
   }
 }
 
+@media screen and (min-width: 768px) {
+  .footer-block > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+}
 .footer-list {
   margin-bottom: 60px;
   display: block;
-  width: 232px;
-  margin-right: auto;
-  margin-left: auto;
   text-align: center;
 }
 @media screen and (min-width: 768px) {
   .footer-list {
     display: inline-block;
-    margin-left: 76px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer-list {
-    text-align: left;
-    margin-left: 0;
     margin-bottom: 0;
   }
 }
@@ -1164,11 +1216,6 @@ body {
 }
 @media screen and (min-width: 768px) {
   .footer .social-list {
-    margin-left: 165px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .footer .social-list {
     margin-bottom: 0;
   }
 }
@@ -1183,51 +1230,15 @@ body {
   color: #ffffff;
 }
 
-.footer-title {
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-  color: #FFFFFF;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: center;
-}
-
-@media screen and (min-width: 768px) {
-  .soc-networks .footer-title {
-    margin-left: 165px;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .subscription .footer-title {
-    display: block;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  .subscription {
-    margin-left: 93px;
-  }
-}
-
 .subscription__form {
-  display: block;
-  width: 450px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media screen and (min-width: 1200px) {
-  .subscription__form {
-    display: flex;
-    align-items: flex-start;
-    width: 100%;
-  }
+  width: 100%;
 }
 
 .subscription__mail {
-  width: 450px;
+  width: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -1237,10 +1248,11 @@ body {
   padding: 15px 16px;
   margin-bottom: 20px;
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .subscription__mail {
-    margin-right: 12px;
-    width: 358px;
+    max-width: 450px;
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -1278,11 +1290,6 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-@media screen and (min-width: 1200px) {
-  .subscription__wrap {
-    display: inline-block;
-  }
-}
 
 .subscription__btn {
   width: 200px;
@@ -1306,4 +1313,36 @@ body {
   position: absolute;
   top: 13px;
   right: 28px;
+}
+
+.footer-desktop {
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-desktop .footer-list {
+  text-align: left;
+}
+
+.footer-desktop .subscription__form {
+  display: flex;
+  align-items: center;
+}
+
+.footer-desktop .subscription__mail {
+  min-width: 358px;
+  margin: 0;
+  margin-right: 12px;
+}
+
+@media (min-width: 480px) {
+  .footer-desktop {
+    display: none;
+  }
+}
+@media (min-width: 1200px) {
+  .footer-desktop {
+    display: flex;
+  }
 }/*# sourceMappingURL=main.css.map */

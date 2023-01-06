@@ -3,6 +3,7 @@
 .team {
     padding: 60px 0;
     background-color: #F5F4FA ; 
+    display: block;
     
     @include desktop {
         padding: 94px 0;
@@ -16,6 +17,11 @@
     @include tablet {
         justify-content: space-between;
     }
+
+    @include desktop{
+        flex-wrap: nowrap;
+
+    }
   
 }
 
@@ -24,16 +30,24 @@
     background: #FFFFFF;
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
-        margin-bottom: 30px;
-        
-        
+    
+    margin-bottom: 30px;
+    
+ 
      @include tablet {
-            flex-basis: calc((100% - 60px) / 2);    
+            flex-basis: calc((100% - 30px) / 2);
+            &:nth-last-child(-n + 2) {
+                    margin-bottom: 0;
+                }
      }
 
      @include desktop {
-        flex-basis: calc((100% - 60px) / 4);
+        flex-basis: calc((100% - 30px) / 4);
+        
+        margin-bottom: 0;
+        &:not(:last-child) {
+                margin-right: 30px;
+            }
      }
 
 }

@@ -55,6 +55,9 @@
     color: var(--text-color);
     @include font (14, null, 1.7, null);
     margin-bottom: 30px;
+    @include desktop{
+        margin-bottom: 0;
+    }
   
 }
 

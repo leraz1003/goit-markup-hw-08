@@ -9,36 +9,56 @@
 
 }
 
+
+@media (min-width:1200px) {
+    .footer-tablet {
+        display: none;
+    }
+}
+
+
+
+
 .footer-block {
     @include tablet {
         display: flex;
-        align-items: center;
+        align-items: flex-start;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 60px;
     }  
 
-    @include desktop {
-        align-items: flex-start;
-    }
-
 }
+
+@include tablet {
+    .footer-block>div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
 
 .footer-list {
     margin-bottom: 60px;
     display: block;
-    width: 232px;
-    margin-right: auto;
-    margin-left: auto; 
+    // width: 232px;
+    // margin-right: auto;
+    // margin-left: auto; 
     text-align: center; 
 
     @include tablet {
         display: inline-block;
-        margin-left: 76px;
+        margin-bottom: 0;
+        
+        // margin-left: 76px;
     }
 
-    @include desktop {
-        text-align: left;
-        margin-left: 0;
-        margin-bottom: 0;
-    }
+    // @include desktop {
+    //     text-align: left;
+    //     margin-left: 0;
+    //     margin-bottom: 0;
+    // }
 }
 
 .footer-list__link {
@@ -60,12 +80,12 @@
 .footer .social-list {
     margin-bottom: 60px;
     @include tablet {
-        margin-left: 165px;
+        margin-bottom: 0;
     } 
     
-    @include desktop {
-        margin-bottom: 0;
-    }
+    // @include desktop {
+    //     margin-bottom: 0;
+    // }
 }
 
 .footer .social-list__link {
@@ -81,57 +101,38 @@
     color: #ffffff; 
 }
 
-.footer-title {
-    @include font(14, null, 1.14, 0.03em);
-    text-transform: uppercase;
-    color: #FFFFFF;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-     
-        // @include  desktop {
-        //     display: inline-block;
-        // }
-}
-
-.soc-networks .footer-title {
-    @include tablet {
-        margin-left: 165px;
-    } 
-}
-
-.subscription .footer-title {
-    @include desktop {
-            display: block;
-        }
-}
 
 
-.subscription {
-    @include desktop {
-        margin-left: 93px;
-    } 
-}
 
+// .subscription .footer-title {
+//     @include desktop {
+//             display: block;
+//         }
+// }
 
 
 .subscription__form {
-    display: block;
-    width: 450px;
-    margin-left: auto;
-    margin-right: auto;
+    // display: block;
+    width: 100%;
+    // width: 450px;
+    // margin-left: auto;
+    // margin-right: auto;
 
-    @include desktop {
-        display: flex;
-        align-items: flex-start;
-        width: 100%;
-    }
-
-   
+    // @include desktop {
+    //     display: flex;
+    //     align-items: flex-start;
+    //     justify-content: center;
+    //     // width: 100%;
+    // }  
 }
 
 .subscription__mail {
-    width: 450px;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+
     height: 50px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
@@ -143,10 +144,16 @@
     padding: 15px 16px;
     margin-bottom: 20px;
 
-    @include desktop {
-        margin-right: 12px;
-        width: 358px;
+    @include tablet {
+        max-width: 450px;
+        display: flex;
+        justify-content: center;
     }
+
+    // @include desktop {
+    //     margin-right: 12px;
+    //     width: 358px;
+    // }
 }
 
 .input-mailing::placeholder {
@@ -164,9 +171,9 @@
     margin-right: auto;
     margin-left: auto;
 
-    @include desktop{
-        display: inline-block;
-    }
+    // @include desktop{
+    //     display: inline-block;
+    // }
 
 }
 
@@ -196,3 +203,38 @@
     right: 28px;
 }
 
+
+// desktop
+.footer-desktop {
+    width: 100%;
+ 
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-desktop .footer-list {
+    text-align: left;
+}
+
+.footer-desktop .subscription__form {
+    display: flex;
+    align-items: center;
+}
+
+.footer-desktop .subscription__mail {
+    min-width: 358px;
+    margin: 0;
+    margin-right: 12px;
+}
+
+@media (min-width:480px) {
+    .footer-desktop {
+        display: none;
+    }
+}
+
+@media (min-width:1200px) {
+    .footer-desktop {
+        display: flex;
+    }
+}

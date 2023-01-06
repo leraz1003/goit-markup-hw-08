@@ -18,10 +18,13 @@
     }
 }
 
-.footer .container {
+.hero-container {
     @include desktop {
-        display: flex;
-        align-items: flex-start;
+        display: block;
+        max-width: 1600px;
+        height: 600px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
@@ -31,6 +34,14 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.footer .container {
+    @include desktop {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
 }
 
 

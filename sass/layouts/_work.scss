@@ -2,7 +2,12 @@
 
 .work-section {
     padding-top: 0;
+    margin-bottom: 94px;
+    @media  (max-width: 1200px) {
+            display: none;
+        }
 }
+
 
 .picture-list{
     display: flex;

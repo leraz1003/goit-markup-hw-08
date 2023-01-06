@@ -22,15 +22,21 @@
 
     @include tablet{
         display: inline-block;
-        margin-left: 115px;
+        // margin-left: 115px;
     }
 
     @include desktop{
-        margin-left: 0;
+        // margin-left: 0;
+        margin: 0;
+        margin-bottom: 28px;
     }
 }
 
 .footer__logo>span {
     color: #ffffff;
 }
+
+
+
+
 
