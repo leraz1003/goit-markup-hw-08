@@ -6,7 +6,6 @@
     @include tablet {
             display: flex;
     }
-
 }
 
 
@@ -17,8 +16,6 @@
 }
 
 
-
-
 .footer-block {
     @include tablet {
         display: flex;
@@ -27,7 +24,6 @@
         width: 100%;
         margin-bottom: 60px;
     }  
-
 }
 
 @include tablet {
@@ -38,27 +34,15 @@
     }
 }
 
-
 .footer-list {
     margin-bottom: 60px;
-    display: block;
-    // width: 232px;
-    // margin-right: auto;
-    // margin-left: auto; 
+    display: block; 
     text-align: center; 
 
     @include tablet {
         display: inline-block;
         margin-bottom: 0;
-        
-        // margin-left: 76px;
     }
-
-    // @include desktop {
-    //     text-align: left;
-    //     margin-left: 0;
-    //     margin-bottom: 0;
-    // }
 }
 
 .footer-list__link {
@@ -83,9 +67,6 @@
         margin-bottom: 0;
     } 
     
-    // @include desktop {
-    //     margin-bottom: 0;
-    // }
 }
 
 .footer .social-list__link {
@@ -103,27 +84,8 @@
 
 
 
-
-// .subscription .footer-title {
-//     @include desktop {
-//             display: block;
-//         }
-// }
-
-
 .subscription__form {
-    // display: block;
     width: 100%;
-    // width: 450px;
-    // margin-left: auto;
-    // margin-right: auto;
-
-    // @include desktop {
-    //     display: flex;
-    //     align-items: flex-start;
-    //     justify-content: center;
-    //     // width: 100%;
-    // }  
 }
 
 .subscription__mail {
@@ -149,11 +111,6 @@
         display: flex;
         justify-content: center;
     }
-
-    // @include desktop {
-    //     margin-right: 12px;
-    //     width: 358px;
-    // }
 }
 
 .input-mailing::placeholder {
@@ -170,11 +127,6 @@
     width: 200px;
     margin-right: auto;
     margin-left: auto;
-
-    // @include desktop{
-    //     display: inline-block;
-    // }
-
 }
 
 
@@ -207,7 +159,6 @@
 // desktop
 .footer-desktop {
     width: 100%;
- 
     justify-content: space-between;
     align-items: center;
 }
@@ -227,6 +178,11 @@
     margin-right: 12px;
 }
 
+@media (max-width:479px) {
+    .footer-desktop {
+            display: none;
+        } 
+}
 @media (min-width:480px) {
     .footer-desktop {
         display: none;

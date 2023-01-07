@@ -1,5 +1,4 @@
 
-
 .mobile-menu {
     padding: 48px 40px;
     display: flex;
@@ -8,8 +7,6 @@
             justify-content: space-between;
 
 }
-
-
 
 .menu-container {
     position: fixed;
@@ -147,8 +144,6 @@
     
 }
 
-
-
 .navigation__list {
     display: flex;
     @include tablet {
@@ -173,9 +168,6 @@
         }
 
 }
-
-
-
 
 /*  link */
 

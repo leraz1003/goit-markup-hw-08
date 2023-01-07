@@ -1336,6 +1336,11 @@ body {
   margin-right: 12px;
 }
 
+@media (max-width: 479px) {
+  .footer-desktop {
+    display: none;
+  }
+}
 @media (min-width: 480px) {
   .footer-desktop {
     display: none;
