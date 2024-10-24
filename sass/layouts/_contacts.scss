@@ -1,0 +1,79 @@
+//contacts
+.contacts {
+  padding: 60px 0;
+
+  @include desktop {
+    padding: 94px 0;
+  }
+}
+
+.contacts-title {
+  text-align: center;
+  margin-bottom: 50px;
+  @include font(36, 700, 1.2, 0.05em);
+}
+
+.contacts-info {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+
+  @include tablet {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.contacts-details {
+  max-width: 450px;
+}
+
+.contacts-details h2 {
+  @include font(24, 700, 1.2, 0.05em);
+  margin-bottom: 20px;
+}
+
+.contacts-details p,
+.contacts-details a {
+  @include font(18, 400, 1.6, 0.03em);
+  margin-bottom: 15px;
+  color: var(--primary-text-color);
+}
+
+.contacts-details a {
+  text-decoration: none;
+  color: var(--accent-color);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+.contacts-map {
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+}
+
+.contacts-map iframe {
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+/* Карта */
+.map-container {
+  overflow: hidden;
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+}
+
+.map-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
